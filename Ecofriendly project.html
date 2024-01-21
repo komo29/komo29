@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)file:///C:/Users/Mayegun%20kabirat%20O/Shecodesfinalproject.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=&lt;device-width&gt;, initial-scale=1.0">
+    <title>Ecofriendly project</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ecofriendly ♻</h1>
+      <h2>Stay Green with your environment</h2>
+
+      <img src="./Ecofriendly project_files/environmentally-friendly-home.jpeg" alt"ecofriendly"="" width="50">
+
+      <p>
+        <strong>Waste reduction and recycling</strong> play crucial roles in
+        maintaining an eco-friendly balance. Embracing a "reduce, reuse,
+        recycle" mindset encourages responsible consumption and waste
+        management. By minimizing single-use plastics, recycling materials, and
+        composting organic waste, individuals contribute to the preservation of
+        ecosystems and the conservation of valuable resources
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Environmentally_friendly" target="_blank" class="learn-more">
+        Learn more on wikipedia</a>
+
+      <small> </small>
+      <br>
+      <button>Recycle product</button>
+      <p class="footer">This page was built by Mayegun Olamide</p>
+    </div>
+    <script>
+      function RecycleProduct() {
+        let name = prompt("What is your name 😀?");
+        let country = prompt("what country are you from✔?");
+        let email = prompt("What is your email👀❓");
+        let mobile = prompt("What is your mobile number📳");
+        if (name.length) {
+          alert(
+            "Thanks," +
+              name +
+              ", we will be in touch. Meanwhile, Spread the news!👏👏👏"
+          );
+        } else {
+          alert("No name, You can't recycle!😔");
+        }
+      }
+
+      let recyclebutton = document.querySelector("button");
+      recyclebutton.addEventListener("click", RecycleProduct);
+    </script>
+  
+  <style>
+    body {
+      background-color: #9fc088;
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+      color: #557153;
+    }
+    h2 {
+      text-align: center;
+      color: #557153;
+      border: 1px solid#F4EAE0;
+      line-height: 50px;
+      border-radius: 4px;
+    }
+    p {
+      text-align: center;
+      color: #191919;
+    }
+
+    button {
+      background: greenyellow;
+      display: block;
+      color: black;
+      padding: 10px 20px;
+      font-size: 24px;
+      margin: 0 auto;
+      border-radius: 6px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    button:hover {
+      cursor: pointer;
+      color: #f4eae0;
+      opacity: 0.5;
+    }
+    img {
+      margin: 0 auto;
+      display: block;
+      max-width: 90%;
+      width: 90%;
+      border-radius: 16px;
+      overflow-clip-margin: content-box;
+      overflow: clip;
+    }
+    .learn-more:hover {
+      text-decoration: underline;
+    }
+    .learn-more {
+      display: block;
+      color: #557153;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+
+    p {
+      text-align: center;
+      line-height: 1.5;
+      font-size: 18px;
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+    }
+    .footer {
+      text-align: center;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  </style>
+
+</body></html>

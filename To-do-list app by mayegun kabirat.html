@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)file:///C:/Users/Mayegun%20kabirat%20O/To-do-list%20app.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="file:///C:/Users/Mayegun%20kabirat%20O/style.css">
+    <title>To-do-list app by mayegun kabirat</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>To-Do-List</h1>
+      <input type="text" id="taskInput" placeholder="Add a new task">
+      <button onclick="addTask()">Add Task</button>
+      <ul id="taskList"><li>Sort out my Python Assignment<button onclick="removeTask(this)">Remove</button></li><li>Draft an essay on the emerging of new transportation system<button onclick="removeTask(this)">Remove</button></li></ul>
+    </div>
+    <script src="file:///C:/Users/Mayegun%20kabirat%20O/script.js"></script>
+    <script>
+      function addTask() {
+        var taskInput = document.getElementById("taskInput");
+        var taskList = document.getElementById("taskList");
+
+        if (taskInput.value.trim() === "") {
+          alert("Please enter a task");
+          return;
+        }
+
+        var li = document.createElement("li");
+        li.innerHTML =
+          taskInput.value +
+          '<button onclick="removeTask(this)">Remove</button>';
+        taskList.appendChild(li);
+
+        taskInput.value = "";
+      }
+      function removeTask(button) {
+        var li = button.parentNode;
+        li.parentNode.removeChild(li);
+      }
+    </script>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: deeppink;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .container {
+        text-align: center;
+      }
+      input {
+        padding: 8px;
+        margin: 5px;
+      }
+      button {
+        padding: 8px;
+        background-color: darkorchid;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin: 10px;
+        padding: 8px;
+        background-color: brown;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  
+
+</body></html>
